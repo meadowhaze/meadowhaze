@@ -1,0 +1,52 @@
+/* ==========================================================================
+   Menus
+   ========================================================================== */
+
+.site-header {
+  @extend %clearfix;
+}
+
+.site-title {
+  text-decoration: none;
+  font-size: 26px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 30px 0 0 0;
+  margin: 0;
+  float: left;
+  color: inherit;
+}
+
+.main-menu {
+
+  padding: 36px 0 30px;
+  margin: 0;
+  float: right;
+
+  ul {
+    padding: 0;
+    margin: 0;
+    display: block;
+    @extend %clearfix;
+  }
+
+  @extend %clearfix;
+
+  a {
+    //@include reset-list();
+    //float: right;/
+    display: inline-block;
+    margin-left: 20px;
+    padding: 0 10px;
+    text-transform: uppercase;
+    color: inherit;
+    border-bottom: 2px solid transparent;
+
+    &:hover {
+      border-color: #444444;
+    }
+
+    a {  color: inherit;  }
+  }
+}

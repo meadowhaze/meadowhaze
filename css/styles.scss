@@ -1,0 +1,146 @@
+---
+---
+
+$theme-color: #448D56;
+$maincolor: #6c8d5c;
+$secoundcolor: #F8F5DA;
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+@import "normalize";
+@import "neat/neat";
+@import "mixins";
+@import "buttons";
+@import "menus";
+@import "contact";
+@import "project";
+@import "testimonials";
+
+
+
+
+.sect {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  @extend %clearfix;
+}
+
+@import "home-heading";
+
+html, body {
+  height: 100%;
+  background: white;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+  font-size: 18px;
+  letter-spacing: .05em;
+  padding: 0;
+  margin: 0;
+  color: #555;
+
+
+  &.page-padding {
+    padding: 20px;
+
+    &:before {
+      content: ' ';
+      width: 100%;
+      height: 20px;
+      background: white;
+      position: fixed;
+      top: auto;
+      margin-top: -20px;
+      z-index: 9999;
+    }
+  }
+}
+
+body {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+p {
+  margin: 0 0 20px 0;
+}
+
+a {
+  color: $theme-color;
+  font-weight: bolder;
+  &:visited {
+    color: inherit;
+  }
+}
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+//$neat-grid: (
+//        columns: 12,
+//        gutter: 20px,
+//);
+
+
+.container {
+  //@include grid-container;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.banner {
+  background-image: url( '../images/header-image.jpg');
+  min-height: 200px;
+  background-position: center;
+  background-size: cover;
+}
+
+.footer {
+  background: $secoundcolor;
+  font-size: 12px;
+  padding: 100px 0 70px;
+  font-weight: 100;
+  color: $maincolor;
+}
+
+
+//.container {
+//  @include container(1000px);
+//}
+
+.social {
+  display: inline-block;
+  margin: 0 0 0 0;
+  text-decoration: none;
+  height: 25px;
+}
+
+.social svg {
+  height: 100%;
+  fill: white;
+}
+
+blockquote {
+  margin: 0 0 20px;
+  padding: 20px 20px 20px 25px;
+  border-left: 2px solid #ddd;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid #E3E3E3;
+  display: inline-block;
+  width: 100%;
+  margin: 30px 0;
+  clear: both;
+}

@@ -1,0 +1,86 @@
+/* ------------------------ */
+/*   Contact
+/* ------------------------ */
+
+/* ===================================================== */
+/* Contact                                               */
+/* ===================================================== */
+
+$contactBg: #f0f0f0;
+$contactBorderColor: #f5f5f5;
+$contactBorderWidth: 4px;
+
+$contact_text_area_height: 203px;
+
+/* styling */
+.hire-contact,
+.contact-form {
+  //text-align: center; // to center align columns
+
+  max-width: 500px;
+  margin: auto;
+
+  //@include break-md-min {
+  //  max-width: 700px;
+  //}
+  //
+  //@include break-lg-min {
+  //  max-width: 1100px;
+  //}
+
+
+  &.align-left {
+    text-align: left;
+    margin: 0;
+  }
+
+  select,
+  input,
+  textarea {
+    width: 100%;
+    //background: $contactBg;
+    @include border($contactBorderWidth, $contactBorderColor);
+  }
+
+
+  textarea {
+    height: $contact_text_area_height;
+  }
+
+  select,
+  input {
+    margin-bottom: 15px;
+    padding: 0 20px;
+    height: 63px;
+  }
+
+  .dark-scheme & {
+    textarea,
+    input {
+      color: #fff;
+      border: 2px solid white;
+      background: none;
+    }
+  }
+
+}
+
+.contact-error {
+  margin-bottom: 20px;
+}
+
+input[type=submit],
+.contact-form .wpcf7-submit,
+.contact-button {
+  margin: 23px auto 0;
+  border: none;
+  @extend %btn;
+  @extend .btn-color;
+}
+
+
+.contact-info i {
+  margin-right: 10px;
+}
+
+

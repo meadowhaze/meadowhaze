@@ -1,0 +1,44 @@
+.clearfix,
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+}
+
+@mixin border( $width: $border-width, $color: $border-color) {
+
+  @if $width != '0' {
+    @if $width == none {
+      border: none;
+    } @else {
+      border: $width solid $color;
+    }
+  }
+}
+
+@mixin after-block() {
+  content: '';
+  display: block;
+}
+
+// Offset not possible
+// Supported by i9+
+// Use can do it with inline-block and not with position absolute
+@mixin vertical-align($offset: 0) {
+  position: absolute;
+  margin-top: #{$offset}px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin headings {
+  h1, h2, h3,
+  h4, h5, h6 {
+    @content;
+  }
+}

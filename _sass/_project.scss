@@ -1,0 +1,110 @@
+/*================================================= */
+/* Project Viewer
+/*================================================= */
+
+.project {
+
+  img {
+    width: 100%;
+    max-width: 700px;
+    display: block;
+    margin: 40px auto;
+    border: 1px solid #d8d8d8;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+
+  .btn {
+    text-transform: uppercase;
+    @extend .btn-color;
+    @extend .btn-lg;
+    width: 170px;
+    text-align: center;
+    display: block;
+    margin: 40px auto 0;
+  }
+}
+
+.portfolio {
+
+  .thumb {
+    @include grid-column(4);
+  }
+
+  img {
+    border: 1px solid #EDEDED;
+    margin-bottom: 30px;
+    display: block;
+  }
+
+  a {
+    position: relative;
+    display: block;
+
+    &:hover .overlay {
+      opacity: 1;
+    }
+
+    .overlay {
+      @include after-block;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      transition: 0.5s;
+      background-color: rgba(0, 0, 0, 0.63);
+      opacity: 0;
+
+      span {
+        @include vertical-align;
+        text-align: center;
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+        display: block;
+        width: 100%;
+      }
+    }
+
+  }
+}
+
+.portfolio-slider-ajax-wrap .bx-wrapper,
+.portfolio-slider-wrap .bx-wrapper {
+  margin-bottom: 50px;
+}
+
+// Slider images full width
+.portfolio-slider-wrap img,
+.project .bx-wrapper img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.project-arrows {
+  background: #f9f9f9;
+  height: 100px;
+  line-height: 100px;
+  padding: 0 20px;
+  text-align: center;
+  color: #444;
+  font-weight: 400;
+
+  .main-portfolio {
+    float: none;
+    display: inline-block;
+  }
+  a {
+    float: right;
+    text-decoration: none;
+    color: inherit;
+  }
+  i {
+    padding: 0 10px;
+    vertical-align: middle;
+    margin-top: -2px;
+  }
+  a:first-child {
+    float: left;
+  }
+}

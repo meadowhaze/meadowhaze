@@ -1,0 +1,40 @@
+.home-heading {
+
+  text-align: center;
+
+  @extend .sect;
+
+  @include headings {
+    color: inherit;
+  }
+
+  %headings {
+    margin: 0;
+    //display: inline-block;
+  }
+
+  h1 {
+    font-family: 'Great Vibes', cursive;
+    color: $maincolor;
+    font-size: 60px;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    @extend %headings;
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: $maincolor;
+    font-weight: 100;
+  }
+
+  a {
+    color: inherit;
+    font-weight: bold;
+  }
+
+  p {
+    max-width: 400px;
+  }
+}
